@@ -76,7 +76,7 @@ const EmployeeDashboard = () => {
   const breakWarned = useRef(false);                      // Track if break warning was shown
   
   // API Configuration
-  const API_URL = 'http://localhost:5000/api';             // Base URL for backend API
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';             // Base URL for backend API
 
   // ===================== ENHANCED NOTIFICATION FUNCTIONS =====================
 
