@@ -86,7 +86,7 @@ const Login = ({ onLogin }) => {
                 <Clock className="w-8 h-8" />
               </div>
               <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                TimeFlow
+                WorkTracker
               </h1>
             </div>
             
@@ -120,10 +120,10 @@ const Login = ({ onLogin }) => {
 
           {/* Social Proof */}
           <div className="pt-8 border-t border-gray-700">
-            <p className="text-sm text-gray-400 mb-4">Trusted by leading companies</p>
+            <p className="text-sm text-gray-400 mb-4">Built for productivity-focused teams</p>
             <div className="flex gap-6 items-center opacity-80">
-              <div className="text-2xl font-bold text-white">2,500+</div>
-              <div className="text-gray-300">Active Companies</div>
+              <div className="text-2xl font-bold text-white">All-in-one</div>
+              <div className="text-gray-300">Time Tracking Platform</div>
             </div>
           </div>
         </div>
@@ -280,9 +280,6 @@ const Login = ({ onLogin }) => {
                     <input type="checkbox" className="w-4 h-4 rounded border-gray-600 bg-gray-800 text-blue-600 focus:ring-blue-500" />
                     <span className="text-gray-300">Remember me</span>
                   </label>
-                  <button type="button" className="text-blue-400 hover:text-blue-300 font-semibold">
-                    Forgot password?
-                  </button>
                 </div>
               )}
 
