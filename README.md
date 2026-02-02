@@ -467,10 +467,6 @@ Contributions are welcome! Please follow these steps:
 4. Push to branch: `git push origin feature/your-feature`
 5. Open a pull request
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ## 👨‍💻 Author
 
 **SKSpraveen**
@@ -486,7 +482,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 For issues and questions:
 - Open an issue on GitHub
-- Contact: [Your Contact Information]
+- Contact: sasindupraveen705@gmail.com
 
 ---
 
