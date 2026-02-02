@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: work-tracker-backend
+    env: node
+    plan: free
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        scope: run_and_build
+        sync: false
+      - key: JWT_SECRET
+        scope: run_and_build
+        sync: false
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: CORS_ORIGIN
+        value: https://your-vercel-frontend.vercel.app

@@ -1,0 +1,59 @@
+name: Build & Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Trigger on version tags like v1.0.0
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: windows-latest
+            build-command: npm run electron:build:win
+            artifact-name: TimeFlow Setup.exe
+            artifact-path: client/dist-electron/*.exe
+          - os: macos-latest
+            build-command: npm run electron:build:mac
+            artifact-name: TimeFlow.dmg
+            artifact-path: client/dist-electron/*.dmg
+          - os: ubuntu-latest
+            build-command: npm run electron:build:linux
+            artifact-name: TimeFlow-*.AppImage
+            artifact-path: client/dist-electron/*.AppImage
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install client dependencies
+        working-directory: client
+        run: npm install
+
+      - name: Build Electron app
+        working-directory: client
+        run: ${{ matrix.build-command }}
+
+      - name: Upload artifacts to release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ matrix.artifact-path }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload artifacts for next job
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.os }}-artifacts
+          path: ${{ matrix.artifact-path }}
