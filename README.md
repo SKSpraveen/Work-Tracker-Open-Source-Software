@@ -2,6 +2,9 @@
 
 A comprehensive work tracking and employee monitoring system built with Electron, React, Node.js, and MongoDB. This application provides both web and desktop interfaces for tracking employee work hours, attendance, breaks, and system activity.
 
+![Alt Text](https://github.com/SKSpraveen/Work-Tracker-Open-Source-Software/blob/main/app.jpg?raw=true)
+
+
 ## 🌟 Features
 
 - **Employee Time Tracking**: Automatic clock-in/clock-out with real-time tracking
