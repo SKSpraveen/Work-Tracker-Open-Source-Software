@@ -27,7 +27,7 @@ const LandingPage = ({ onGetStarted }) => {
               <Clock className="w-6 h-6" />
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              TimeFlow
+              WorkTracker
             </span>
           </div>
           <button 
@@ -188,11 +188,15 @@ const LandingPage = ({ onGetStarted }) => {
               <Clock className="w-5 h-5" />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              TimeFlow
+              Work Tracker
             </span>
           </div>
-          <p className="text-gray-400 mb-2">© 2024 TimeFlow. Enterprise Time Tracking Platform.</p>
+          <p className="text-gray-400 mb-2">© 2026 Work Tracker. All rights reserved.</p>
+          <p className="text-gray-400 mb-2">Enterprise Time Tracking Platform.</p>
           <p className="text-sm text-gray-500">Built with ❤️ for teams everywhere</p>
+          <p className="text-sm text-gray-500">
+            Created by <span className="font-medium text-gray-400">FriendStack Developers</span>
+          </p>
         </div>
       </footer>
 
